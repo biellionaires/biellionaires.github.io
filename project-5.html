@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>TUGAS LAPORAN 5 PRAKTIKUM SISTEM PARALEL DAN TERDISTRIBUSI - Nabiel Al-Qaid Athallah</title>
+    <link rel="shortcut icon" href="./assets/png/nabiel.png" type="image/x-icon">
+    <meta name="description" content="Case study page of Project" />
+
+    <link rel="stylesheet" href="css/style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__content">
+        <div class="header__logo-container">
+          <div class="header__logo-img-cont">
+            <img
+              src="./assets/png/nabiel.png"
+              alt="Nabiel Logo Image"
+              class="header__logo-img"
+            />
+          </div>
+          <span class="header__logo-sub">Nabiel Al-Qaid Athallah</span>
+        </div>
+        <div class="header__main">
+          <ul class="header__links">
+            <li class="header__link-wrapper">
+              <a href="./index.html" class="header__link"> Home </a>
+            </li>
+            <li class="header__link-wrapper">
+              <a href="./index.html#about" class="header__link">About </a>
+            </li>
+            <li class="header__link-wrapper">
+              <a href="./index.html#projects" class="header__link">
+                Projects
+              </a>
+            </li>
+            <li class="header__link-wrapper">
+              <a href="./index.html#contact" class="header__link"> Contact </a>
+            </li>
+          </ul>
+          <div class="header__main-ham-menu-cont">
+            <img
+              src="./assets/svg/ham-menu.svg"
+              alt="hamburger menu"
+              class="header__main-ham-menu"
+            />
+            <img
+              src="./assets/svg/ham-menu-close.svg"
+              alt="hamburger menu close"
+              class="header__main-ham-menu-close d-none"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="header__sm-menu">
+        <div class="header__sm-menu-content">
+          <ul class="header__sm-menu-links">
+            <li class="header__sm-menu-link">
+              <a href="./index.html"> Home </a>
+            </li>
+
+            <li class="header__sm-menu-link">
+              <a href="./index.html#about"> About </a>
+            </li>
+
+            <li class="header__sm-menu-link">
+              <a href="./index.html#projects"> Projects </a>
+            </li>
+
+            <li class="header__sm-menu-link">
+              <a href="./index.html#contact"> Contact </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <section class="project-cs-hero">
+      <div class="project-cs-hero__content">
+        <h1 class="heading-primary">PROJECT LAPORAN PRAKTIKUM 5</h1>
+        <div class="project-cs-hero__info">
+          <p class="text-primary">
+            Laporan ini membahas konsep dan fungsi NAT (Network Address Translation) dalam pengaturan jaringan, termasuk peran NAT dalam firewall dan bridge. Proses ini mencakup pengertian NAT firewall dan NAT bridge, serta perbedaan keduanya dalam pengelolaan alamat IP dan keamanan jaringan. Selain itu, laporan ini menjelaskan tentang AP Bridge dan Bridge, yang menguraikan fungsinya dalam menghubungkan jaringan kabel dan nirkabel serta segmentasi jaringan di layer 2. Dengan memahami topik ini, pembaca dapat memperoleh wawasan tentang bagaimana NAT dan bridge berkontribusi pada manajemen dan keamanan jaringan secara keseluruhan.
+          </p>
+        </div>
+        <div class="project-cs-hero__cta">
+          <a href="./index.html#projects" class="btn btn--bg" target="_blank">CLICK HERE TO RETURN TO THE PROJECTS PAGE</a>
+        </div>
+      </div>
+    </section>
+    <section class="project-details">
+      <div class="main-container">
+        <div class="project-details__content">
+          <div class="project-details__showcase-img-cont">
+            <img
+              src="./assets/jpeg/project3.jpg"
+              alt="Project Image"
+              class="project-details__showcase-img"
+            />
+          </div>
+          <div class="project-details__content-main">
+            <div class="project-details__desc">
+                <h1 class="project-details__content-title">Pengertian NAT Bridge dan NAT Firewall, AP Bridge dan Bridge</h1>           
+                <h3 class="project-details__content-title">1. NAT (Network Address Translation)</h3>
+                <p class="project-details__desc-para">
+                    NAT (Network Address Translation) adalah teknik jaringan yang digunakan untuk menerjemahkan alamat IP dalam suatu jaringan. Teknik ini sering digunakan untuk menyembunyikan alamat IP privat di belakang satu atau beberapa alamat IP publik. Dengan mengimplementasikan NAT, banyak perangkat di jaringan lokal dapat berbagi satu alamat IP publik ketika mengakses internet. Ini tidak hanya membantu mengurangi konsumsi alamat IP publik yang semakin terbatas, tetapi juga meningkatkan keamanan jaringan dengan menyembunyikan struktur internal dari jaringan lokal.
+                </p>
+                
+                <h3 class="project-details__content-title">2. Jenis-Jenis NAT</h3>
+                <ul class="project-details__desc-para">
+                    <li><strong>Static NAT:</strong> Menghubungkan satu alamat IP publik dengan satu alamat IP privat.</li>
+                    <li><strong>Dynamic NAT:</strong> Menghubungkan banyak alamat IP privat ke sekelompok alamat IP publik.</li>
+                    <li><strong>Port Address Translation (PAT):</strong> Memungkinkan beberapa alamat IP privat untuk terhubung ke satu alamat IP publik dengan menggunakan nomor port yang berbeda.</li>
+                </ul>
+                
+                <h3 class="project-details__content-title">3. NAT di Menu Firewall</h3>
+                <p class="project-details__desc-para">
+                    Pada router atau perangkat jaringan, NAT biasanya dikonfigurasi melalui menu Firewall, karena di situlah proses filtering dan manajemen alur paket terjadi. Konfigurasi NAT di Firewall berfungsi untuk mengatur lalu lintas yang masuk dan keluar dari jaringan, serta memberikan lapisan tambahan dalam pengamanan jaringan.
+                </p>
+                
+                <h3 class="project-details__content-title">Ciri dan Fungsi NAT di Menu Firewall</h3>
+                <ul class="project-details__desc-para">
+                    <li><strong>Pengaturan Routing dan Translasi:</strong> Mengatur bagaimana IP privat diterjemahkan ke IP publik saat paket melewati firewall.</li>
+                    <li><strong>Source NAT (Masquerade):</strong> Menyembunyikan IP privat di balik satu IP publik untuk koneksi keluar.</li>
+                    <li><strong>Destination NAT (DNAT):</strong> Mengalihkan paket dari luar ke alamat internal tertentu.</li>
+                    <li><strong>Control dan Filter Paket:</strong> Mengatur port forwarding dan QoS.</li>
+                    <li><strong>Keamanan:</strong> Memperkuat keamanan jaringan dengan menyembunyikan struktur internal.</li>
+                </ul>
+                
+                <h3 class="project-details__content-title">Kelebihan NAT di Firewall</h3>
+                <ul class="project-details__desc-para">
+                    <li>Fleksibilitas dan kontrol lebih baik terhadap traffic.</li>
+                    <li>Mudah digunakan untuk SNAT dan DNAT.</li>
+                    <li>Mendukung konfigurasi kompleks seperti VPN dan tunneling.</li>
+                </ul>
+                
+                <h3 class="project-details__content-title">Contoh Penggunaan NAT di Firewall</h3>
+                <ul class="project-details__desc-para">
+                    <li>Koneksi internet dengan banyak perangkat privat menggunakan satu alamat IP publik.</li>
+                    <li>Mengarahkan trafik dari internet ke server internal menggunakan port forwarding.</li>
+                </ul>
+                
+                <h3 class="project-details__content-title">4. NAT di Menu Bridge</h3>
+                <p class="project-details__desc-para">
+                    Bridge bekerja pada lapisan 2 OSI (Data Link Layer), sementara NAT terkait dengan lapisan 3 (Network Layer). Oleh karena itu, NAT di menu Bridge memiliki tujuan dan mekanisme berbeda dibandingkan dengan NAT di Firewall.
+                </p>
+                
+                <h3 class="project-details__content-title">Ciri dan Fungsi NAT di Menu Bridge</h3>
+                <ul class="project-details__desc-para">
+                    <li>Digunakan dalam bridging dengan translasi IP minimal, seperti komunikasi antar VLAN.</li>
+                    <li>Jarang digunakan, biasanya untuk segmentasi khusus.</li>
+                    <li>Tidak memiliki kontrol trafik selengkap NAT di firewall.</li>
+                </ul>
+                
+                <h3 class="project-details__content-title">Keterbatasan NAT di Bridge</h3>
+                <ul class="project-details__desc-para">
+                    <li>Kurang fleksibel dibandingkan NAT di firewall.</li>
+                    <li>Tidak cocok untuk jaringan skala besar.</li>
+                </ul>
+                
+                <h3 class="project-details__content-title">5. AB (Access Point Bridge) vs AB (Bridge)</h3>
+                
+                <h4 class="project-details__content-title">A. AB (Access Point Bridge)</h4>
+                <p class="project-details__desc-para">
+                    AB adalah mode di mana Access Point memungkinkan perangkat klien terhubung secara wireless dan menghubungkan beberapa perangkat jaringan melalui akses nirkabel. Fungsi utamanya adalah mengintegrasikan jaringan kabel dan nirkabel menjadi satu kesatuan yang dapat saling berkomunikasi.
+                </p>
+                
+                <h4 class="project-details__content-title">Ciri dan Fungsi AB</h4>
+                <ul class="project-details__desc-para">
+                    <li>Menghubungkan jaringan wireless dan kabel.</li>
+                    <li>Mendukung banyak klien wireless.</li>
+                    <li>Memancarkan SSID untuk diakses oleh klien.</li>
+                    <li>Meneruskan frame wireless ke perangkat kabel.</li>
+                </ul>
+                
+                <h4 class="project-details__content-title">Kapan AB Digunakan?</h4>
+                <p class="project-details__desc-para">
+                    Ketika perlu menghubungkan jaringan kabel dan wireless dalam satu subnet, terutama di kantor atau rumah yang memiliki perangkat wireless dan kabel.
+                </p>
+                
+                <h4 class="project-details__content-title">B. AB (Bridge)</h4>
+                <p class="project-details__desc-para">
+                    AB adalah mekanisme yang menghubungkan dua atau lebih jaringan di lapisan 2. Fungsinya adalah meneruskan frame Ethernet antar segmen jaringan tanpa mengubah alamat IP atau protokol.
+                </p>
+                
+                <h4 class="project-details__content-title">Ciri dan Fungsi AB</h4>
+                <ul class="project-details__desc-para">
+                    <li>Layer 2 forwarding: Meneruskan frame tanpa melihat paket layer 3.</li>
+                    <li>Segmentasi jaringan: Memisahkan lalu lintas untuk mencegah broadcast storm.</li>
+                    <li>Tidak memancarkan SSID.</li>
+                    <li>Menghubungkan VLAN dalam satu jaringan.</li>
+                </ul>
+                
+                <h4 class="project-details__content-title">Kapan AB Digunakan?</h4>
+                <p class="project-details__desc-para">
+                    Dalam jaringan LAN untuk menghubungkan dua segmen fisik dan untuk segmentasi yang mencegah broadcast berlebihan.
+                </p>
+                
+                <h3 class="project-details__content-title">Kesimpulan</h3>
+                <p class="project-details__desc-para">
+                    NAT di Firewall lebih berguna untuk routing dan manajemen paket secara kompleks, menawarkan fleksibilitas dan kontrol tinggi dalam pengaturan trafik jaringan. Sementara itu, NAT di Bridge hanya digunakan dalam skenario layer 2 tertentu dan kurang populer dalam praktik jaringan. AB memungkinkan integrasi wireless dan kabel melalui Access Point, sedangkan AB bekerja di lapisan 2 untuk menghubungkan segmen jaringan kabel, membantu dalam segmentasi dan pengelolaan lalu lintas di dalam jaringan.
+                </p>           
+            </div>          
+              
+            <!-- </div>
+            <div class="project-details__tools-used">
+              <h3 class="project-details__content-title">Tools Used</h3>
+              <div class="skills">
+                <div class="skills__skill">HTML</div>
+                <div class="skills__skill">CSS</div>
+                <div class="skills__skill">JavaScript</div>
+                <div class="skills__skill">React</div>
+                <div class="skills__skill">SASS</div>
+                <div class="skills__skill">GIT</div>
+                <div class="skills__skill">Shopify</div>
+                <div class="skills__skill">Wordpress</div>
+                <div class="skills__skill">Google ADS</div>
+                <div class="skills__skill">Facebook Ads</div>
+                <div class="skills__skill">Android</div>
+                <div class="skills__skill">IOS</div>
+              </div>
+            </div>
+            <div class="project-details__links">
+              <h3 class="project-details__content-title">See Live</h3>
+              <a
+                href="#"
+                class="btn btn--med btn--theme project-details__links-btn"
+                target="_blank"
+                >Live Link</a
+              >
+              <a
+                href="#"
+                class="btn btn--med btn--theme-inv project-details__links-btn"
+                target="_blank"
+                >Code Link</a
+              >
+            </div> -->
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="main-footer">
+      <div class="main-container">
+        <!-- <div class="main-footer__upper">
+          <div class="main-footer__row main-footer__row-1">
+            <h2 class="heading heading-sm main-footer__heading-sm">
+              <span>Social</span>
+            </h2>
+            <div class="main-footer__social-cont">
+              <a target="_blank" rel="noreferrer" href="#">
+                <img
+                  class="main-footer__icon"
+                  src="./assets/png/linkedin-ico.png"
+                  alt="icon"
+                />
+              </a>
+              <a target="_blank" rel="noreferrer" href="#">
+                <img
+                  class="main-footer__icon"
+                  src="./assets/png/github-ico.png"
+                  alt="icon"
+                />
+              </a>
+              <a target="_blank" rel="noreferrer" href="#">
+                <img
+                  class="main-footer__icon"
+                  src="./assets/png/twitter-ico.png"
+                  alt="icon"
+                />
+              </a>
+              <a target="_blank" rel="noreferrer" href="#">
+                <img
+                  class="main-footer__icon"
+                  src="./assets/png/yt-ico.png"
+                  alt="icon"
+                />
+              </a>
+              <a target="_blank" rel="noreferrer" href="#">
+                <img
+                  class="main-footer__icon main-footer__icon--mr-none"
+                  src="./assets/png/insta-ico.png"
+                  alt="icon"
+                />
+              </a>
+            </div>
+          </div>
+          <div class="main-footer__row main-footer__row-2">
+            <h4 class="heading heading-sm text-lt">John Doe</h4>
+            <p class="main-footer__short-desc">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit facilis
+              tempora explicabo quae quod deserunt
+            </p>
+          </div>
+        </div> -->
+
+        <div class="main-footer__lower">
+          &copy; Copyright 2024. Made by
+          <a rel="noreferrer" target="_blank" href="#"
+            >Nabiel Al-Qaid Athallah</a
+          >
+        </div>
+      </div>
+    </footer>
+    <script src="./index.js"></script>
+  </body>
+</html>

@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>TUGAS LAPORAN 4 PRAKTIKUM SISTEM PARALEL DAN TERDISTRIBUSI - Nabiel Al-Qaid Athallah</title>
+    <link rel="shortcut icon" href="./assets/png/nabiel.png" type="image/x-icon">
+    <meta name="description" content="Case study page of Project" />
+
+    <link rel="stylesheet" href="css/style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__content">
+        <div class="header__logo-container">
+          <div class="header__logo-img-cont">
+            <img
+              src="./assets/png/nabiel.png"
+              alt="Nabiel Logo Image"
+              class="header__logo-img"
+            />
+          </div>
+          <span class="header__logo-sub">Nabiel Al-Qaid Athallah</span>
+        </div>
+        <div class="header__main">
+          <ul class="header__links">
+            <li class="header__link-wrapper">
+              <a href="./index.html" class="header__link"> Home </a>
+            </li>
+            <li class="header__link-wrapper">
+              <a href="./index.html#about" class="header__link">About </a>
+            </li>
+            <li class="header__link-wrapper">
+              <a href="./index.html#projects" class="header__link">
+                Projects
+              </a>
+            </li>
+            <li class="header__link-wrapper">
+              <a href="./index.html#contact" class="header__link"> Contact </a>
+            </li>
+          </ul>
+          <div class="header__main-ham-menu-cont">
+            <img
+              src="./assets/svg/ham-menu.svg"
+              alt="hamburger menu"
+              class="header__main-ham-menu"
+            />
+            <img
+              src="./assets/svg/ham-menu-close.svg"
+              alt="hamburger menu close"
+              class="header__main-ham-menu-close d-none"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="header__sm-menu">
+        <div class="header__sm-menu-content">
+          <ul class="header__sm-menu-links">
+            <li class="header__sm-menu-link">
+              <a href="./index.html"> Home </a>
+            </li>
+
+            <li class="header__sm-menu-link">
+              <a href="./index.html#about"> About </a>
+            </li>
+
+            <li class="header__sm-menu-link">
+              <a href="./index.html#projects"> Projects </a>
+            </li>
+
+            <li class="header__sm-menu-link">
+              <a href="./index.html#contact"> Contact </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <section class="project-cs-hero">
+      <div class="project-cs-hero__content">
+        <h1 class="heading-primary">PROJECT LAPORAN PRAKTIKUM 4</h1>
+        <div class="project-cs-hero__info">
+          <p class="text-primary">
+            Laporan ini membahas langkah-langkah konfigurasi routing statis pada tiga perangkat MikroTik, yang memungkinkan setiap jaringan lokal untuk saling berkomunikasi dengan lancar. Proses ini mencakup konfigurasi IP address pada setiap router, penambahan routing statis, dan pengujian koneksi menggunakan perintah <strong>ping</strong> untuk memastikan paket data dapat berpindah antar jaringan. Selain itu, laporan ini juga menjelaskan troubleshooting dasar yang dapat dilakukan jika terjadi masalah koneksi, termasuk pengecekan IP, status interface, dan pengaturan firewall. Dengan mengikuti panduan ini, administrator dapat memastikan jaringan berjalan dengan baik dan stabil melalui routing statis, yang cocok untuk jaringan berskala kecil hingga menengah.
+          </p>
+        </div>
+        <div class="project-cs-hero__cta">
+          <a href="./index.html#projects" class="btn btn--bg" target="_blank">CLICK HERE TO RETURN TO THE PROJECTS PAGE</a>
+        </div>
+      </div>
+    </section>
+    <section class="project-details">
+      <div class="main-container">
+        <div class="project-details__content">
+          <div class="project-details__showcase-img-cont">
+            <img
+              src="./assets/jpeg/project4.jpg"
+              alt="Project Image"
+              class="project-details__showcase-img"
+            />
+          </div>
+          <div class="project-details__content-main">
+            <div class="project-details__desc">
+                <h1 class="project-details__content-title">Langkah-Langkah Konfigurasi Routing Static 3 Mikrotik</h1>
+                <h3 class="project-details__content-title">1. Topologi dan Persiapan Awal</h3>
+                <p class="project-details__desc-para">
+                Sebelum masuk ke konfigurasi, kita perlu menentukan topologi jaringan dan alamat IP yang akan digunakan.
+                </p>
+                <p class="project-details__desc-para">
+                <strong>MikroTik 1 (R1):</strong><br>
+                Interface ether1: 10.10.10.1/24<br>
+                Interface ether2: 192.168.100.1/24
+                </p>
+                <p class="project-details__desc-para">
+                <strong>MikroTik 2 (R2):</strong><br>
+                Interface ether1: 10.10.10.2/24<br>
+                Interface ether2: 11.11.11.1/24<br>
+                Interface ether3: 192.168.200.1/24
+                </p>
+                <p class="project-details__desc-para">
+                <strong>MikroTik 3 (R3):</strong><br>
+                Interface ether1: 11.11.11.2/24<br>
+                Interface ether2: 192.168.50.1/24
+                </p>
+                <p class="project-details__desc-para">
+                Dengan topologi ini, kita akan mengkonfigurasi routing statis untuk memastikan setiap router dapat berkomunikasi dengan jaringan yang berbeda.
+                </p>
+
+                <h3 class="project-details__content-title">2. Langkah Konfigurasi MikroTik</h3>
+
+                <h4 class="project-details__content-title">A. Konfigurasi IP Address</h4>
+                <p class="project-details__desc-para">
+                Langkah pertama adalah mengkonfigurasi IP address pada setiap MikroTik.
+                </p>
+
+                <ol class="project-details__desc-para">
+                <li><strong>Langkah pada MikroTik 1 (R1):</strong><br>
+                    - Interface: ether1 | Address: 10.10.10.1/24<br>
+                    - Interface: ether2 | Address: 192.168.100.1/24
+                </li>
+                <li><strong>Langkah pada MikroTik 2 (R2):</strong><br>
+                    - Interface: ether1 | Address: 10.10.10.2/24<br>
+                    - Interface: ether2 | Address: 11.11.11.1/24<br>
+                    - Interface: ether3 | Address: 192.168.200.1/24
+                </li>
+                <li><strong>Langkah pada MikroTik 3 (R3):</strong><br>
+                    - Interface: ether1 | Address: 11.11.11.2/24<br>
+                    - Interface: ether2 | Address: 192.168.50.1/24
+                </li>
+                </ol>
+
+                <h4 class="project-details__content-title">B. Konfigurasi Static Routing</h4>
+                <p class="project-details__desc-para">
+                Setelah konfigurasi IP, kita tambahkan routing statis agar jaringan bisa saling berkomunikasi.
+                </p>
+
+                <ol class="project-details__desc-para">
+                <li><strong>Konfigurasi di MikroTik 1 (R1):</strong><br>
+                    - Dst. Address: 192.168.200.0/24 | Gateway: 10.10.10.2<br>
+                    - Dst. Address: 192.168.50.0/24 | Gateway: 10.10.10.2
+                </li>
+                <li><strong>Konfigurasi di MikroTik 2 (R2):</strong><br>
+                    - Dst. Address: 192.168.100.0/24 | Gateway: 10.10.10.1<br>
+                    - Dst. Address: 192.168.50.0/24 | Gateway: 11.11.11.2
+                </li>
+                <li><strong>Konfigurasi di MikroTik 3 (R3):</strong><br>
+                    - Dst. Address: 192.168.100.0/24 | Gateway: 11.11.11.1<br>
+                    - Dst. Address: 192.168.200.0/24 | Gateway: 11.11.11.1
+                </li>
+                </ol>
+
+                <h4 class="project-details__content-title">C. Testing Koneksi Antar MikroTik</h4>
+                <p class="project-details__desc-para">
+                Untuk memastikan bahwa konfigurasi berhasil, lakukan pengujian koneksi dengan menggunakan perintah ping:
+                </p>
+                <ol class="project-details__desc-para">
+                <li>Ping dari MikroTik 1 ke MikroTik 2: <code>ping 192.168.200.1</code></li>
+                <li>Ping dari MikroTik 1 ke MikroTik 3: <code>ping 192.168.50.1</code></li>
+                </ol>
+
+                <h4 class="project-details__content-title">D. Troubleshooting Koneksi (Opsional)</h4>
+                <p class="project-details__desc-para">
+                Jika terjadi masalah koneksi, beberapa langkah yang bisa dilakukan untuk troubleshooting antara lain:
+                </p>
+                <ul class="project-details__desc-para">
+                <li>Periksa apakah IP address sudah dikonfigurasi dengan benar.</li>
+                <li>Pastikan routing statis sudah menunjuk ke gateway yang tepat.</li>
+                <li>Periksa status interface pada setiap router.</li>
+                <li>Jika firewall diaktifkan, coba nonaktifkan sementara untuk memastikan bahwa firewall bukan penyebab masalah.</li>
+                </ul>
+
+                <h3 class="project-details__content-title">3. Kesimpulan</h3>
+                <p class="project-details__desc-para">
+                Dengan konfigurasi yang tepat, routing statis pada tiga MikroTik memungkinkan setiap jaringan lokal berkomunikasi dengan lancar. Static routing memberikan kontrol penuh bagi administrator, namun membutuhkan perhatian dalam konfigurasi dan pemeliharaan manual. Pengujian koneksi menggunakan perintah <code>ping</code> membuktikan bahwa paket dapat berpindah antar jaringan dengan baik. Routing statis cocok untuk jaringan kecil hingga menengah karena tidak memerlukan overhead tambahan yang dihasilkan oleh dynamic routing.
+                </p>                              
+            </div>          
+              
+            <!-- </div>
+            <div class="project-details__tools-used">
+              <h3 class="project-details__content-title">Tools Used</h3>
+              <div class="skills">
+                <div class="skills__skill">HTML</div>
+                <div class="skills__skill">CSS</div>
+                <div class="skills__skill">JavaScript</div>
+                <div class="skills__skill">React</div>
+                <div class="skills__skill">SASS</div>
+                <div class="skills__skill">GIT</div>
+                <div class="skills__skill">Shopify</div>
+                <div class="skills__skill">Wordpress</div>
+                <div class="skills__skill">Google ADS</div>
+                <div class="skills__skill">Facebook Ads</div>
+                <div class="skills__skill">Android</div>
+                <div class="skills__skill">IOS</div>
+              </div>
+            </div>
+            <div class="project-details__links">
+              <h3 class="project-details__content-title">See Live</h3>
+              <a
+                href="#"
+                class="btn btn--med btn--theme project-details__links-btn"
+                target="_blank"
+                >Live Link</a
+              >
+              <a
+                href="#"
+                class="btn btn--med btn--theme-inv project-details__links-btn"
+                target="_blank"
+                >Code Link</a
+              >
+            </div> -->
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="main-footer">
+      <div class="main-container">
+        <!-- <div class="main-footer__upper">
+          <div class="main-footer__row main-footer__row-1">
+            <h2 class="heading heading-sm main-footer__heading-sm">
+              <span>Social</span>
+            </h2>
+            <div class="main-footer__social-cont">
+              <a target="_blank" rel="noreferrer" href="#">
+                <img
+                  class="main-footer__icon"
+                  src="./assets/png/linkedin-ico.png"
+                  alt="icon"
+                />
+              </a>
+              <a target="_blank" rel="noreferrer" href="#">
+                <img
+                  class="main-footer__icon"
+                  src="./assets/png/github-ico.png"
+                  alt="icon"
+                />
+              </a>
+              <a target="_blank" rel="noreferrer" href="#">
+                <img
+                  class="main-footer__icon"
+                  src="./assets/png/twitter-ico.png"
+                  alt="icon"
+                />
+              </a>
+              <a target="_blank" rel="noreferrer" href="#">
+                <img
+                  class="main-footer__icon"
+                  src="./assets/png/yt-ico.png"
+                  alt="icon"
+                />
+              </a>
+              <a target="_blank" rel="noreferrer" href="#">
+                <img
+                  class="main-footer__icon main-footer__icon--mr-none"
+                  src="./assets/png/insta-ico.png"
+                  alt="icon"
+                />
+              </a>
+            </div>
+          </div>
+          <div class="main-footer__row main-footer__row-2">
+            <h4 class="heading heading-sm text-lt">John Doe</h4>
+            <p class="main-footer__short-desc">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit facilis
+              tempora explicabo quae quod deserunt
+            </p>
+          </div>
+        </div> -->
+
+        <div class="main-footer__lower">
+          &copy; Copyright 2024. Made by
+          <a rel="noreferrer" target="_blank" href="#"
+            >Nabiel Al-Qaid Athallah</a
+          >
+        </div>
+      </div>
+    </footer>
+    <script src="./index.js"></script>
+  </body>
+</html>
